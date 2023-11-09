@@ -6,5 +6,20 @@ $colors: (
 
 $font-sizes: (
     headText1: 32px,
-    headText2: 24px
+    headText2: 24px,
+    headText3: 20px,
+    body1: 16px,
 );
+
+@mixin button(){
+    width: 196px;
+    height: 42px;
+    font-size: map-get($font-sizes, body1 );
+    font-weight: 400;
+    background-color: map-get($colors, primary );
+    color: white;
+    line-height: 42px;
+    text-align: center;
+    align-items: center;
+    border-radius: 8px;
+}
