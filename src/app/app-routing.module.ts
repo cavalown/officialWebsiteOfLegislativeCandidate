@@ -5,6 +5,7 @@ import { ActivityComponent } from './views/activity/activity.component';
 import { PolicyComponent } from './views/policy/policy.component';
 import { ProductComponent } from './views/product/product.component';
 import { DonateComponent } from './views/donate/donate.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -41,5 +42,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
 })
 export class AppRoutingModule {}
