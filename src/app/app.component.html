@@ -5,9 +5,15 @@
       <div class="nav-logo-title">陳英渝</div>
     </div>
     <div class="nav-title">
-      <div class="nav-title-item">最新活動</div>
-      <div class="nav-title-item">政策議題</div>
-      <div class="nav-title-item">民眾服務</div>
+      <div class="nav-title-item" (click)="scrollToTarget('activity')">
+        最新活動
+      </div>
+      <div class="nav-title-item" (click)="scrollToTarget('policy')">
+        政策議題
+      </div>
+      <div class="nav-title-item" (click)="scrollToTarget('service')">
+        民眾服務
+      </div>
       <div class="nav-title-item" [routerLink]="['/donate']">小額捐款</div>
     </div>
     <div class="nav-link">
@@ -84,9 +90,13 @@
     <div class="footer-container-content">
       <div class="footer-container-content-name">陳英渝服務處</div>
       <div class="footer-container-content-info">
-        <div class="footer-container-content-info-1">海星區聽海大道88號鳳梨大樓3樓</div>
+        <div class="footer-container-content-info-1">
+          海星區聽海大道88號鳳梨大樓3樓
+        </div>
         <div class="footer-container-content-info-2">(02) 878-9487</div>
-        <div class="footer-container-content-info-3">信箱：meowoffice&#64;linmeow.tw</div>
+        <div class="footer-container-content-info-3">
+          信箱：meowoffice&#64;linmeow.tw
+        </div>
       </div>
       <div class="footer-container-content-service-time">
         服務時間:週一至週五 9:00 - 18:00
