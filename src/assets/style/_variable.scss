@@ -22,4 +22,11 @@ $font-sizes: (
     text-align: center;
     align-items: center;
     border-radius: 8px;
+    cursor: pointer;
+    &:hover {
+        background-color: white;
+        color: map-get($colors, primary );
+        border: 3px solid map-get($colors, primary );
+        align-items: center;
+    }
 }
