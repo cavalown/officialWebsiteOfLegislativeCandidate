@@ -31,7 +31,7 @@
             &-text {
                 display: flex;
                 flex-direction: column;
-                align-items: end;
+                align-items: flex-end;
 
                 &-title {
                     width: 100%;
@@ -180,9 +180,157 @@
         }
     }
 
-    .product {}
+    .product {
+        &-title {
+            z-index: 10;
+        }
+
+        .product-bg {
+            width: 100%;
+            height: 456px;
+            position: absolute;
+            top: 230px;
+            left: 0;
+            background-color: map-get($colors, secondary);
+            z-index: 1;
+        }
+
+        .product-global {
+            position: absolute;
+            top: 50px;
+            z-index: 2;
+            width: 100%;
+            height: 636px;
+            background-image: url("../../../assets/image/globe.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 636px;
+        }
+
+        .product-items {
+            height: 456px;
+            position: absolute;
+            top: 230px;
+            // left: calc(50% - 648px);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            padding: 32px 312px;
+
+            .product-imgs {
+                display: flex;
+                justify-content: center;
+                gap: 24px;
+
+                img {
+                    width: 416px;
+                    height: 278px;
+                }
+            }
+
+            .product-content {
+                margin-top: 24px;
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+
+                .product-text {
+                    color: map-get($colors, primary);
+                    font-size: map-get($font-sizes, headText2);
+                    line-height: 40px;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .product-link {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    &-btn {
+                        text-decoration: none;
+                        @include button();
+                    }
+                }
+            }
+        }
+
+    }
 
     .service {
-        &-content {}
+        &-content {
+            margin: 150px auto;
+            background-color: map-get($colors, secondary);
+            width: 1294px;
+            border-radius: 0 100px;
+            padding: 144px 168px 48px 168px;
+
+            .title {
+                margin-bottom: 16px;
+                font-size: map-get($font-sizes, headText2);
+                color: map-get($colors, primary);
+                text-align: center;
+            }
+
+            .form-wrap {
+                width: 854px;
+                margin-top: 40px auto 0;
+                border: 10px white solid;
+                border-radius: 0 100px;
+                padding: 36px 109px;
+
+                .form-content {
+                    &-title {
+                        font-size: map-get($font-sizes, headText2);
+                        color: map-get($colors, primary);
+                        text-align: center;
+                        margin-bottom: 22px;
+                    }
+
+                    &-item {
+                        display: flex;
+                        margin-bottom: 16px;
+
+                        &-title {
+                            width: 220px;
+                            font-size: map-get($font-sizes, body1);
+                            color: map-get($colors, primary);
+                            line-height: 56px;
+
+                            &::after {
+                                content: '*';
+                                color: red;
+                            }
+                        }
+
+                        &-input {
+                            width: 416px;
+                            height: 56px;
+
+                            input {
+                                width: 100%;
+                                height: 100%;
+                                border: none;
+                                border-radius: 8px;
+                            }
+                        }
+                    }
+
+                    .form-message {
+                        display: flex;
+                        flex-direction: column;
+
+                        .form-content-item-title,
+                        .form-content-item-input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .service-btn {
+                @include button();
+                margin: 48px auto 0;
+            }
+        }
     }
 }
