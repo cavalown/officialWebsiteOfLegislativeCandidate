@@ -4,7 +4,6 @@
     width: 100%;
 
     .banner {
-        border: 2px solid green;
         width: 100%;
         height: 800px;
         background-image: url('../../../assets/image/banner.jpg');
@@ -13,7 +12,6 @@
     }
 
     .about {
-        border: 2px solid green;
         width: 100%;
         height: 800px;
         position: relative;
@@ -72,7 +70,6 @@
     .policy,
     .product,
     .service {
-        border: 2px solid green;
         width: 100%;
         height: 1000px;
         position: relative;
@@ -103,9 +100,11 @@
     }
 
     .activity {
+        height: 1110px;
+
         &-content {
             width: 100%;
-            height: 850px;
+            height: 100%;
             position: absolute;
             top: 150px;
             left: 0;
@@ -121,6 +120,7 @@
 
                 &-card {
                     width: 416px;
+                    color: map-get($colors, primary);
 
                     &-date {
                         line-height: 29.05px;
@@ -131,6 +131,78 @@
                         img {
                             width: 416px;
                             height: 416px;
+                            border-radius: 16px;
+                        }
+                    }
+
+                    &-title {
+                        line-height: 28.96px;
+                        font-size: map-get($font-sizes, headText3);
+                        margin-top: 16px;
+                        margin-bottom: 16px;
+                    }
+
+                    &-text {
+                        line-height: 23.17px;
+                        font-size: map-get($font-sizes, body1);
+                        height: 115px;
+                        overflow-y: hidden;
+
+                        p {
+                            word-break: normal;
+                        }
+                    }
+
+                    &-btn {
+                        margin-top: 58px;
+
+                        &-button {
+                            margin: 0 auto;
+                            @include button();
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .policy {
+        height: 1300px;
+
+        &-title {
+            background-color: map-get($colors, secondary);
+        }
+
+        &-content {
+            width: 100%;
+            height: 900px;
+            position: absolute;
+            top: 150px;
+            left: 0;
+            background-color: map-get($colors, secondary);
+            border-radius: 0 0 0 100px;
+
+            &-wrap {
+                max-width: 1297px;
+                margin: 135px auto;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-items: center;
+                gap: 23px;
+
+                &-card {
+                    width: 416px;
+                    color: map-get($colors, primary);
+
+                    &-date {
+                        line-height: 29.05px;
+                        font-size: map-get($font-sizes, headText2);
+                    }
+
+                    &-img {
+                        img {
+                            width: 416px;
+                            height: 589px;
                             border-radius: 16px;
                         }
                     }
@@ -164,23 +236,9 @@
         }
     }
 
-    .policy {
-        &-title {
-            background-color: map-get($colors, secondary);
-        }
-
-        &-content {
-            width: 100%;
-            height: 750px;
-            position: absolute;
-            top: 150px;
-            left: 0;
-            background-color: map-get($colors, secondary);
-            border-radius: 0 0 0 100px;
-        }
-    }
-
     .product {
+        height: 800px;
+
         &-title {
             z-index: 10;
         }
@@ -211,7 +269,6 @@
             height: 456px;
             position: absolute;
             top: 230px;
-            // left: calc(50% - 648px);
             left: 50%;
             transform: translateX(-50%);
             z-index: 3;
@@ -258,7 +315,10 @@
 
     .service {
         &-content {
+            position: absolute;
             margin: 150px auto;
+            left: 50%;
+            translate: -50%;
             background-color: map-get($colors, secondary);
             width: 1294px;
             border-radius: 0 100px;
