@@ -14,6 +14,9 @@ import { HomeServiceComponent } from './components/service/service.component';
 import { HomeActivityComponent } from './components/activity/activity.component';
 import { HomeProductComponent } from './components/product/product.component';
 import { HomePolicyComponent } from './components/policy/policy.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavdropdownComponent } from './components/navdropdown/navdropdown.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { HomePolicyComponent } from './components/policy/policy.component';
     HomeServiceComponent,
     HomeActivityComponent,
     HomeProductComponent,
-    HomePolicyComponent
+    HomePolicyComponent,
+    NavbarComponent,
+    NavdropdownComponent,
+    FooterComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

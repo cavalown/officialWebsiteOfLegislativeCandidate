@@ -6,13 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  isOpenDropdown = false;
-  scrollToTarget(targetId:string): void {
-    const targetElement = document.getElementById(targetId);
-    targetElement?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
 
-  handleOpenDropdown(){
-    this.isOpenDropdown = ! this.isOpenDropdown
-  }
 }
