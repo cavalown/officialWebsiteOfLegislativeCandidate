@@ -12,19 +12,34 @@ $font-sizes: (
     body1: 16px,
 );
 
-@mixin button(){
+@mixin browser($breakpoint) {
+    @if $breakpoint =='phone' {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint =='pad' {
+        @media (min-width: 768px) and (max-width: 1100px) {
+            @content;
+        }
+    }
+}
+
+@mixin button() {
     width: 196px;
     height: 42px;
-    font-size: map-get($font-sizes, body1 );
+    font-size: map-get($font-sizes, body1);
     font-weight: 400;
-    background-color: map-get($colors, primary );
+    background-color: map-get($colors, primary);
     color: white;
     line-height: 42px;
     text-align: center;
     align-items: center;
     border-radius: 8px;
     cursor: pointer;
+
     &:hover {
-        background: map-get($colors, linearGBtn );
+        background: map-get($colors, linearGBtn);
     }
 }
