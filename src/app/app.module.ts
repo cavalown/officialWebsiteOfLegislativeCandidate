@@ -9,6 +9,11 @@ import { PolicyComponent } from './views/policy/policy.component';
 import { ProductComponent } from './views/product/product.component';
 import { DonateComponent } from './views/donate/donate.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeAboutComponent } from './components/about/about.component';
+import { HomeServiceComponent } from './components/service/service.component';
+import { HomeActivityComponent } from './components/activity/activity.component';
+import { HomeProductComponent } from './components/product/product.component';
+import { HomePolicyComponent } from './components/policy/policy.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +23,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PolicyComponent,
     ProductComponent,
     DonateComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HomeAboutComponent,
+    HomeServiceComponent,
+    HomeActivityComponent,
+    HomeProductComponent,
+    HomePolicyComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
