@@ -6,6 +6,7 @@ import { PolicyComponent } from './views/policy/policy.component';
 import { ProductComponent } from './views/product/product.component';
 import { DonateComponent } from './views/donate/donate.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,7 @@ const routes: Routes = [
     path: 'donate',
     component: DonateComponent,
   },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

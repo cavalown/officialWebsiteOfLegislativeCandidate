@@ -8,6 +8,7 @@ import { ActivityComponent } from './views/activity/activity.component';
 import { PolicyComponent } from './views/policy/policy.component';
 import { ProductComponent } from './views/product/product.component';
 import { DonateComponent } from './views/donate/donate.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DonateComponent } from './views/donate/donate.component';
     ActivityComponent,
     PolicyComponent,
     ProductComponent,
-    DonateComponent
+    DonateComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
