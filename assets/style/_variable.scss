@@ -2,6 +2,7 @@ $colors: (
     primary: #1D3260,
     secondary: #ECF5FC,
     linearG: unquote("linear-gradient(to right, #1D3260 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%)"),
+    linearGBtn: unquote("linear-gradient(90deg, #0C3483 0%, #A2B6DF 100%, #6B8CCE 100%)")
 );
 
 $font-sizes: (
@@ -11,16 +12,34 @@ $font-sizes: (
     body1: 16px,
 );
 
-@mixin button(){
+@mixin browser($breakpoint) {
+    @if $breakpoint =='phone' {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint =='pad' {
+        @media (min-width: 768px) and (max-width: 1100px) {
+            @content;
+        }
+    }
+}
+
+@mixin button() {
     width: 196px;
     height: 42px;
-    font-size: map-get($font-sizes, body1 );
+    font-size: map-get($font-sizes, body1);
     font-weight: 400;
-    background-color: map-get($colors, primary );
+    background-color: map-get($colors, primary);
     color: white;
     line-height: 42px;
     text-align: center;
     align-items: center;
     border-radius: 8px;
     cursor: pointer;
+
+    &:hover {
+        background: map-get($colors, linearGBtn);
+    }
 }
