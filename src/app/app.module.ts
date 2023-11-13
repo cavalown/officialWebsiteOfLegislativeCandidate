@@ -17,6 +17,7 @@ import { HomePolicyComponent } from './components/policy/policy.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavdropdownComponent } from './components/navdropdown/navdropdown.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TitleComponent } from './components/title/title.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HomePolicyComponent,
     NavbarComponent,
     NavdropdownComponent,
-    FooterComponent
+    FooterComponent,
+    TitleComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

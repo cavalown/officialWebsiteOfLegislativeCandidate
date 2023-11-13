@@ -7,12 +7,14 @@
     background-color: #fff;
 
     .navbar {
+        width: 100%;
         @include browser('pad') {
             display: none;
         }
     }
 
     .nav-dropdown {
+        width: 100%;
         display: none;
 
         @include browser('pad') {
@@ -23,5 +25,8 @@
     .main-container {
         max-width: 100%;
         margin-top: 100px;
+    }
+    .footer-container{
+        width: 100%;
     }
 }

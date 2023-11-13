@@ -1,55 +1,102 @@
 @import '../../../assets/style/variable';
-.about {
+
+.about-container {
     width: 100%;
-    height: 800px;
-    position: relative;
+    height: 900px;
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    position: relative;
 
-    &-left {
-        position: absolute;
-        top: 175px;
-        left: 43px;
-        z-index: 2;
+    @include browser('pad') {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+       max-height: 800px;
+    }
+
+    .about-photo {
         width: 50%;
-        display: flex;
-        justify-content: flex-end;
+        position: absolute;
+        top: 0;
+        right: 40px;
 
-        &-text {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
+        @include browser('pad') {
+            width: 98%;
+            text-align: center;
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 16px;
+        }
 
-            &-title {
-                width: 100%;
-                text-align: left;
+        .title {
+            display: none;
+
+            @include browser('pad') {
+                display: block;
+                line-height: 50px;
                 font-size: map-get($font-sizes, headText1);
                 color: map-get($colors, primary);
-                margin-bottom: 8px;
             }
+        }
 
-            &-content {
-                max-width: 636px;
-                padding: 65.5px 21.5px;
-                font-size: map-get($font-sizes, headText2);
-                line-height: 50px;
-                font-weight: 400;
-                color: map-get($colors, primary);
-                background: map-get($colors, secondary);
-                border-radius: 0 100px;
+        .image {
+            img {
+                width: 636px;
+                height: 636px;
+
+                @include browser('pad') {
+                    width: 328px;
+                    height: 328px;
+                }
             }
         }
     }
 
-    &-right {
-        position: absolute;
-        right: 43px;
-        z-index: 1;
+    .about-text {
         width: 50%;
+        position: absolute;
+        top: 120px;
+        left: 40px;
 
-        &-img {
-            width: 636px;
-            height: 636px;
-            background-image: url('../../../assets/image/about-img.jpg');
+        @include browser('pad') {
+            width: 58%;
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .title {
+            line-height: 50px;
+            font-size: map-get($font-sizes, headText1);
+            color: map-get($colors, primary);
+
+            @include browser('pad') {
+                display: none;
+            }
+        }
+
+        .content {
+            background-color: map-get($colors, secondary);
+            border-radius: 0 100px;
+            padding: 66px 22px;
+
+            p {
+                color: map-get($colors, primary);
+                line-height: 50px;
+                font-size: map-get($font-sizes, headText2);
+                word-break: normal;
+
+                @include browser('pad') {
+                    line-height: 40px;
+                    font-size: map-get($font-sizes, body1);
+                }
+            }
         }
     }
 }

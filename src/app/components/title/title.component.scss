@@ -1,0 +1,47 @@
+@import '../../../assets/style/variable';
+.title-container {
+    width: 100%;
+    height: 371px;
+    background-image: url('../../../assets/image/title-whale.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    @include browser('pad') {
+        background-color: map-get($colors, secondary );
+        background-image: none;
+        height: 80px;
+    }
+    .title-content {
+        width: 100%;
+        margin-top: 60px;
+        padding-right: 80px;
+        text-align: center;
+        @include browser('pad') {
+            text-align: left;
+            margin-top: 0;
+            padding-left: 24px;
+            padding-right: 24px;
+            display: flex;
+            justify-content: space-between
+        }
+        p {
+            color: white;
+            line-height: 47px;
+            font-size: map-get($font-sizes, headText2 );
+            @include browser('pad') {
+                color: map-get($colors, primary );
+            }
+        }
+        img{
+            display: none;
+            @include browser('pad'){
+                display: block;
+                width: 87px;
+                height: 55px;
+            }
+        }
+    }
+}
