@@ -34,22 +34,22 @@
 
     &-content {
         width: 100%;
-        height: 100%;
         position: absolute;
         top: 150px;
         left: 0;
         background-color: map-get($colors, secondary);
 
         &-wrap {
-            max-width: 1297px;
+            border: 2px solid red;
             margin: 135px auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            justify-items: center;
+            display: flex;
+            justify-content: center;
             gap: 23px;
+            flex-wrap: wrap;
 
             &-card {
                 width: 416px;
+                border: 2px solid blue;
                 color: map-get($colors, primary);
 
                 &-date {

@@ -36,7 +36,7 @@
         left: 50%;
         translate: -50%;
         background-color: map-get($colors, secondary);
-        width: 1294px;
+        max-width: 1294px;
         border-radius: 0 100px;
         padding: 144px 168px 48px 168px;
 
@@ -48,7 +48,7 @@
         }
 
         .form-wrap {
-            width: 854px;
+            max-width: 854px;
             margin-top: 40px auto 0;
             border: 10px white solid;
             border-radius: 0 100px;
@@ -65,6 +65,10 @@
                 &-item {
                     display: flex;
                     margin-bottom: 16px;
+                    @include browser('pad') {
+                        display: block;
+                        margin-bottom: 8px;
+                    }
 
                     &-title {
                         width: 220px;
