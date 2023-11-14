@@ -21,6 +21,10 @@ import { TitleComponent } from './components/title/title.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { CollapseComponent } from './components/collapse/collapse.component';
+import { DrawCardComponent } from './components/draw-card/draw-card.component';
+import { PolicyCardComponent } from './components/policy-card/policy-card.component';
+import { ActivityCardComponent } from './components/activity-card/activity-card.component';
+import { ImageBlockComponent } from './components/image-block/image-block.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +47,10 @@ import { CollapseComponent } from './components/collapse/collapse.component';
     CarouselComponent,
     DialogComponent,
     CollapseComponent,
+    DrawCardComponent,
+    PolicyCardComponent,
+    ActivityCardComponent,
+    ImageBlockComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
