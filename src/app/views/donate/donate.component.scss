@@ -1,0 +1,185 @@
+@import '../../../assets/style/variable';
+
+.donate-container {
+    .donate-title {
+        background: linear-gradient(to bottom, map-get($colors, secondary) 55%, transparent 45%);
+
+        @include browser('pad') {
+            background: transparent;
+        }
+    }
+
+    .donate-content {
+        width: 90%;
+        color: map-get($colors, primary);
+        margin: 24px auto;
+
+        p {
+            text-align: center;
+            margin: 0 auto 24px;
+            line-height: 45px;
+
+            @include browser('pad') {
+                width: 530px;
+                margin-bottom: 48px;
+            }
+        }
+
+        .donate-money {
+            max-width: 1298px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 25px;
+
+            @include browser('pad') {
+                max-width: 530px;
+                gap: 8px;
+            }
+
+            .money {
+                width: 30%;
+                height: 112px;
+                border: 1px solid map-get($colors, primary);
+                border-radius: 16px;
+                font-size: map-get($font-sizes, headText0);
+                display: flex;
+                justify-content: center;
+                line-height: 112px;
+
+                @include browser('pad') {
+                    font-size: map-get($font-sizes, headText1);
+                    width: 45%;
+                    height: 86px;
+                    line-height: 86px;
+                }
+            }
+        }
+
+        .input-donate-money {
+            max-width: 1298px;
+            margin: 32px auto 0;
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+
+            @include browser('pad') {
+                width: 530px;
+                flex-direction: column;
+            }
+
+            input {
+                width: calc(100% - 197px);
+                height: 112px;
+                border: 1px solid map-get($colors, primary);
+                border-radius: 16px;
+                font-size: map-get($font-sizes, headText1);
+                padding-left: 26px;
+
+                &::after {
+                    content: none;
+                }
+
+                @include browser('pad') {
+                    width: 100%;
+                }
+            }
+
+            .btn {
+                @include button();
+                height: 112px;
+                border-radius: 16px;
+                font-size: map-get($font-sizes, headText1);
+                display: flex;
+                justify-content: center;
+
+                @include browser('pad') {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .donate-introduction {
+        max-width: 1298px;
+        background-color: map-get($colors, secondary);
+        padding: 25px;
+        margin: 72px auto;
+        display: flex;
+
+        @include browser('pad') {
+            // width: 530px;
+            flex-direction: column;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .introduction-image {
+            background-color: map-get($colors, secondary);
+            position: relative;
+            @include browser('pad'){
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                position: absolute;
+                bottom: 24px;
+                width: 416px;
+                height: 416px;
+
+                @include browser('pad') {
+                    position: relative;
+                    bottom: 0;
+                    width: 328px;
+                    height: 328px;
+                }
+            }
+        }
+
+        .introduction-text {
+            padding-left: 440px;
+            background-color: map-get($colors, secondary);
+            font-size: map-get($font-sizes, body1);
+            @include browser('pad'){
+                width: 80%;
+                margin: 23px auto 0;
+                padding-left: 0;
+            }
+            &-title {
+                line-height: 35px;
+                font-size: map-get($font-sizes, headText2);
+                margin-bottom: 20px;
+            }
+
+            &-content {
+                line-height: 32px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .donate-questions {
+        .title{
+            font-size: map-get($font-sizes, headText1 );
+            line-height: 47px;
+            text-align: center;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+        .questions{}
+    }
+
+    .donate-products {
+        .title{
+            font-size: map-get($font-sizes, headText1 );
+            line-height: 47px;
+            text-align: center;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+        .questions{}
+    }
+}

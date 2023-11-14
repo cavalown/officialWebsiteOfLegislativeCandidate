@@ -18,6 +18,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavdropdownComponent } from './components/navdropdown/navdropdown.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TitleComponent } from './components/title/title.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { CollapseComponent } from './components/collapse/collapse.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,9 @@ import { TitleComponent } from './components/title/title.component';
     NavdropdownComponent,
     FooterComponent,
     TitleComponent,
+    CarouselComponent,
+    DialogComponent,
+    CollapseComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
