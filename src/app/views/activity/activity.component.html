@@ -25,6 +25,12 @@
   </div>
   <div class="activity-images">
     <app-image-block></app-image-block>
+    <app-carousel [items]="imageGroup2">
+      <div
+        class="my-custom-content"
+        *ngFor="let image of imageGroup2; let i = index"
+      ></div>
+    </app-carousel>
   </div>
   <div class="activity-links">
     <div class="title">其他活動</div>

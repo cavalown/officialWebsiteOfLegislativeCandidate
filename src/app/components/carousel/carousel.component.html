@@ -1,1 +1,13 @@
-<p>carousel works!</p>
+<div class="carousel-container">
+    <ng-container *ngFor="let item of items">
+      <ng-content></ng-content>
+    </ng-container>
+    
+    <div class="carousel-indicators">
+      <span *ngFor="let item of items; let i = index" 
+            (click)="navigateTo(i)"
+            [class.active]="i === currentIndex">
+      </span>
+    </div>
+  </div>
+  

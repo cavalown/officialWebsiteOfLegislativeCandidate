@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./activity.component.scss']
 })
 export class ActivityComponent {
-
+  imageGroup1:string[] = [];
+  imageGroup2:string[] = [];
 }
