@@ -8,6 +8,7 @@
 
     .navbar {
         width: 100%;
+
         @include browser('pad') {
             display: none;
         }
@@ -26,7 +27,24 @@
         max-width: 100%;
         margin-top: 100px;
     }
-    .footer-container{
+
+    .footer-container {
         width: 100%;
+    }
+
+    .go-top {
+        position: fixed;
+        right: 30px;
+        bottom: 50px;
+        cursor: pointer;
+
+        svg {
+            width: 80px;
+            height: 80px;
+            @include browser('pad') {
+                width: 32px;
+                height: 32px;
+            }
+        }
     }
 }

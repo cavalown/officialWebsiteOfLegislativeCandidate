@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigateService } from 'src/app/service/navigate.service';
 
 @Component({
   selector: 'app-navdropdown',
@@ -7,9 +8,13 @@ import { Component } from '@angular/core';
 })
 export class NavdropdownComponent {
   isOpenDropdown = false;
+  constructor(private _navigateService: NavigateService) {}
+
   scrollToTarget(targetId: string): void {
-    const targetElement = document.getElementById(targetId);
-    targetElement?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this._navigateService.goHome().then(() => {
+      const targetElement = document.getElementById(targetId);
+      targetElement?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   }
   handleOpenDropdown() {
     this.isOpenDropdown = !this.isOpenDropdown;

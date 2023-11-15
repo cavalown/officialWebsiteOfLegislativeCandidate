@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigateService } from 'src/app/service/navigate.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,8 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
+  constructor(private _navigateService: NavigateService) {}
+
   scrollToTarget(targetId: string): void {
-    const targetElement = document.getElementById(targetId);
-    targetElement?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this._navigateService.goHome().then(() => {
+      const targetElement = document.getElementById(targetId);
+      targetElement?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  goHome() {
+    this._navigateService.goHome().then(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    });
   }
 }

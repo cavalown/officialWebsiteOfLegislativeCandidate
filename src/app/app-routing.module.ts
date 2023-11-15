@@ -38,7 +38,7 @@ const routes: Routes = [
     path: 'donate',
     component: DonateComponent,
   },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
