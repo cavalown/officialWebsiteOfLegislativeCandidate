@@ -1,0 +1,77 @@
+@import '../../../assets/style/variable';
+
+.collapse-container {
+    width: 100%;
+    border-bottom: 1px solid map-get($colors, primary);
+
+    .collapse-title {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 24px;
+
+        p {
+            display: flex;
+            justify-content: flex-start;
+            gap: 18px;
+
+            .title-icon {
+                width: 40px;
+                height: 34px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2px 11px;
+                background-color: map-get($colors, primary);
+                border-radius: 8px;
+                line-height: 34px;
+                color: white;
+                font-weight: 600px;
+                font-size: map-get($font-sizes, headText2);
+
+                @include browser('pad') {
+                    height: 46px;
+                }
+            }
+
+            .title-text {
+                display: flex;
+                align-items: center;
+                line-height: 34px;
+                font-size: map-get($font-sizes, body1);
+
+                @include browser('pad') {
+                    line-height: 23px;
+                }
+            }
+        }
+
+        .svg {
+            height: 34px;
+
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+
+    .collapse-content {
+        transition: max-height 0.5s ease-out;
+        padding: 0 24px;
+
+        p {
+            width: 90%;
+            margin: 0 auto;
+            word-break: normal;
+            font-size: map-get($font-sizes, body1);
+            color: rgb(153, 153, 153);
+            line-height: 34px;
+
+            @include browser('pad') {
+                width: 85%;
+                line-height: 23px;
+            }
+        }
+    }
+}

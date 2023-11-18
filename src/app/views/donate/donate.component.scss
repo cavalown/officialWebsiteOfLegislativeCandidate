@@ -169,10 +169,15 @@
             margin-top: 24px;
             margin-bottom: 24px;
         }
-        .questions{}
+        .questions{
+            .question {
+                width: 90%;
+                margin: 0 auto 24px;
+            }
+        }
     }
 
-    .donate-products {
+    .donate-products { 
         .title{
             font-size: map-get($font-sizes, headText1 );
             line-height: 47px;
@@ -180,6 +185,5 @@
             margin-top: 24px;
             margin-bottom: 24px;
         }
-        .questions{}
     }
 }

@@ -46,14 +46,19 @@
   </div>
   <div class="donate-questions">
     <div class="title">常見問題</div>
-    <div class="quetions">
-        <app-collapse></app-collapse>
+    <div class="questions">
+      <div class="question" *ngFor="let question of questions">
+        <app-collapse
+          [title]="question.title"
+          [content]="question.content"
+        ></app-collapse>
+      </div>
     </div>
   </div>
   <div class="donate-products">
     <div class="title">渝渝小物</div>
     <div class="quetions">
-        <app-carousel></app-carousel>
+      <app-carousel></app-carousel>
     </div>
   </div>
 </div>
