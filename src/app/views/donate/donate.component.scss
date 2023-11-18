@@ -47,6 +47,7 @@
                 display: flex;
                 justify-content: center;
                 line-height: 112px;
+                cursor: pointer;
 
                 @include browser('pad') {
                     font-size: map-get($font-sizes, headText1);
@@ -69,6 +70,7 @@
                 flex-direction: column;
             }
 
+
             input {
                 width: calc(100% - 197px);
                 height: 112px;
@@ -76,10 +78,6 @@
                 border-radius: 16px;
                 font-size: map-get($font-sizes, headText1);
                 padding-left: 26px;
-
-                &::after {
-                    content: none;
-                }
 
                 @include browser('pad') {
                     width: 100%;

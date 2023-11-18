@@ -1,0 +1,36 @@
+@import '../../../assets/style/variable';
+
+.donate-dialog-container {
+    width: 684px;
+
+    @include browser('pad') {
+        width: 344px;
+    }
+
+    .content {
+        line-height: 30px;
+        font-size: map-get($font-sizes, body1);
+        color: black;
+        border: 1px solid map-get($colors, primary);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 24px;
+        @include browser('pad') {
+            margin-bottom: 16px;
+        }
+
+        .indent {
+            padding-left: 1em;
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn {
+            @include button();
+        }
+    }
+}

@@ -7,16 +7,20 @@
       個人力量有限，但團結一致，我們能夠實現改變。您的支持將劃下改變的開始。
     </p>
     <div class="donate-money">
-      <div class="money">$300</div>
-      <div class="money">$1,000</div>
-      <div class="money">$10,000</div>
-      <div class="money">$30,000</div>
-      <div class="money">$50,000</div>
-      <div class="money">$100,000</div>
+      <div class="money" (click)="updateAmount(300)">$300</div>
+      <div class="money" (click)="updateAmount(1000)">$1,000</div>
+      <div class="money" (click)="updateAmount(10000)">$10,000</div>
+      <div class="money" (click)="updateAmount(30000)">$30,000</div>
+      <div class="money" (click)="updateAmount(50000)">$50,000</div>
+      <div class="money" (click)="updateAmount(100000)">$100,000</div>
     </div>
-    <div class="input-donate-money">
-      <input type="number" placeholder="請自行輸入金額" />
-      <div class="btn">前往捐款</div>
+    <div class="input-donate-money" [formGroup]="donateForm">
+      <input
+        type="number"
+        placeholder="請自行輸入金額"
+        formControlName="amount"
+      />
+      <div class="btn" (click)="goDonate()">前往捐款</div>
     </div>
   </div>
   <div class="donate-introduction">

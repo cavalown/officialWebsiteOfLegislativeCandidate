@@ -1,0 +1,42 @@
+@import '../../../assets/style/variable';
+
+.dialog-container {
+    background-color: transparent;
+
+    .header {
+        display: flex;
+        color: map-get($colors, primary);
+        margin-bottom: 24px;
+
+        .title {
+            width: calc(100% - 48px);
+            text-align: center;
+            line-height: 48px;
+
+            @include browser('pad') {
+                width: calc(100% - 36px);
+            }
+        }
+
+        .close-btn {
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+
+            svg {
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+
+    .content {
+        color: map-get($colors, primary);
+    }
+
+    .actions {
+        .btn {
+            @include button();
+        }
+    }
+}

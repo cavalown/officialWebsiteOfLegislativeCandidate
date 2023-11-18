@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
@@ -25,6 +25,7 @@ import { DrawCardComponent } from './components/draw-card/draw-card.component';
 import { PolicyCardComponent } from './components/policy-card/policy-card.component';
 import { ActivityCardComponent } from './components/activity-card/activity-card.component';
 import { ImageBlockComponent } from './components/image-block/image-block.component';
+import { DonateDialogComponent } from './dialogs/donate-dialog/donate-dialog.component';
 
 @NgModule({
   declarations: [
@@ -51,8 +52,9 @@ import { ImageBlockComponent } from './components/image-block/image-block.compon
     PolicyCardComponent,
     ActivityCardComponent,
     ImageBlockComponent,
+    DonateDialogComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
