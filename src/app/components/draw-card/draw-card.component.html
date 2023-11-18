@@ -1,1 +1,8 @@
-<p>draw-card works!</p>
+<div class="draw-card-container">
+  <div class="selected-image">
+    <!-- <img *ngIf="selectedImage" [src]="selectedImage" /> -->
+  </div>
+  <div class="image-pool" #imagePool>
+    <img *ngFor="let image of images" [src]="image" />
+  </div>
+</div>

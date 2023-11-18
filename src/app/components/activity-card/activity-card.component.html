@@ -1,1 +1,9 @@
-<p>activity-card works!</p>
+<div class="activity-card-container" *ngIf="activityInfo !== null">
+  <div class="image">
+    <img [src]="activityInfo!.images1[0]!" [alt]="activityInfo.description" />
+  </div>
+  <div class="content">
+    <div class="title">{{ activityInfo.title }}</div>
+    <div class="description">{{ activityInfo.description }}</div>
+  </div>
+</div>

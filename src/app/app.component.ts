@@ -18,14 +18,12 @@ export class AppComponent {
     const dialogKeywordSub = this._dialogCS.switchKeyword$
       .pipe(debounceTime(100))
       .subscribe((keyword) => {
-        console.log({ keyword });
         this.dialogSwitchKeyword = keyword;
       });
     this.subscriptions.add(dialogKeywordSub);
     const openSub = this._dialogCS.isOpen$
       .pipe(debounceTime(100))
       .subscribe((isOpen) => {
-        console.log({ isOpen });
         this.isOpenDialog = isOpen;
       });
     this.subscriptions.add(openSub);

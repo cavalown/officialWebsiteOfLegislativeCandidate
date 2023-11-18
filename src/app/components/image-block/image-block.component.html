@@ -1,1 +1,12 @@
-<p>image-block works!</p>
+<div class="image-block-container">
+  <div class="left">
+    <div class="image" *ngFor="let image of leftImages">
+      <img [src]="image" />
+    </div>
+  </div>
+  <div class="right">
+    <div class="image">
+      <img [src]="rightImage" />
+    </div>
+  </div>
+</div>

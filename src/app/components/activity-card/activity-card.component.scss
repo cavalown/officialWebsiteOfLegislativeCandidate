@@ -1,0 +1,53 @@
+@import '../../../assets/style/variable';
+
+.activity-card-container {
+    width: 100%;
+    height: 196px;
+    border-radius: 16px;
+    background-color: map-get($colors, secondary);
+    display: flex;
+    justify-content: flex-start;
+
+    @include browser('pad') {
+        justify-content: flex-start;
+        align-items: center;
+        height: 160px;
+    }
+
+    .image {
+        img {
+            width: 196px;
+            height: 196px;
+            border-radius: 16px;
+
+            @include browser('pad') {
+                width: 160px;
+                height: 160px;
+            }
+        }
+    }
+
+    .content {
+        color: map-get($colors, primary);
+        padding: 24px;
+
+        .title {
+            font-size: 20px;
+            margin-bottom: 16px;
+            line-height: 29px;
+        }
+
+        .description {
+            font-size: map-get($font-sizes, body1);
+            line-height: 23px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+
+            @include browser('pad') {
+                display: none;
+            }
+        }
+    }
+}

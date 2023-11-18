@@ -1,0 +1,120 @@
+@import '../../../assets/style/variable';
+
+.activity-container {
+    padding-top: 24px;
+
+    .title {
+        font-size: map-get($font-sizes, headText1);
+        text-align: center;
+    }
+
+    .drawer-card-container {
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        .drawer {
+            @include browser('pad') {
+                display: none;
+            }
+        }
+
+        .image {
+            display: none;
+
+            @include browser('pad') {
+                display: block;
+                display: flex;
+                 justify-content: center;
+                 align-items: center;
+                img{
+                    width: 328px;
+                    height: 328px;
+                    border-radius: 16px;
+                }
+            }
+        }
+    }
+
+    .activity-content {
+        padding: 24px;
+        font-size: map-get($font-sizes, body1);
+
+        .date {
+            margin-bottom: 24px;
+        }
+
+        .text {
+            line-height: 32px;
+
+            p {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    .activity-images {
+        .title {
+            width: 100%;
+            font-size: map-get($font-sizes, headText2);
+            text-align: left;
+            padding-left: 24px;
+            padding-right: 24px;
+
+            @include browser('pad') {
+                text-align: center;
+            }
+        }
+
+        .activity-images-wrap {
+            width: 100%;
+            background-color: map-get($colors, secondary);
+
+            .block {
+                @include browser('pad') {
+                    display: none;
+                }
+            }
+
+            .carousel {
+                display: none;
+
+                @include browser('pad') {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .activity-links {
+        width: 100%;
+        padding: 20px;
+
+        .title {
+            text-align: center;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            font-size: map-get($font-sizes, headText2);
+        }
+
+        .cards {
+            display: flex;
+            gap: 21px;
+
+            @include browser('pad') {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .card {
+                width: 636px;
+                height: 196px;
+                border-radius: 16px;
+
+                @include browser('pad') {
+                    min-height: 160px;
+                }
+            }
+        }
+    }
+}

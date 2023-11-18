@@ -1,0 +1,36 @@
+.image-block-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+        width: 48%;
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+
+        .image {
+            img {
+                width: 20vw;
+                height: 20vw;
+                border-radius: 16px;
+            }
+        }
+    }
+
+    .right {
+        width: 48%;
+
+        .image {
+            img {
+                width: 42vw;
+                height: 42vw;
+                border-radius: 16px;
+            }
+        }
+    }
+}
