@@ -1,18 +1,17 @@
+@import '../../../assets/style/variable';
+
 .carousel-container {
-    .carousel-indicators span {
-        height: 10px;
-        width: 10px;
-        margin: 0 5px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        cursor: pointer;
-      }
-      
-      .carousel-indicators .active {
-        background-color: map-get($colors, primary );
-      }
+  .carousel-indicators span {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
   }
-  
-  
-  
+
+  .carousel-indicators .active {
+    background-color: map-get($colors, primary);
+  }
+}
