@@ -7,7 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 export class CarouselComponent {
   @Input() items: any[] = [];
+  image = '';
   currentIndex = 0;
+
+  ngOnInit(){
+    this.image = this.items[0].image;
+  }
 
   next(): void {
     this.currentIndex = (this.currentIndex + 1) % this.items.length;
