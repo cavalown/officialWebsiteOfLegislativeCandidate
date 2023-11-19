@@ -1,1 +1,52 @@
 @import '../../../assets/style/variable';
+.activity-container {
+    width: 100%;
+    background-color: map-get($colors, secondary );
+    .cards {
+        display: flex;
+        justify-content: space-around;
+        @include browser('pad') {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .card {
+            width: 32%;
+            @include browser('pad') {
+                width: 90%;
+            }
+            .date {
+               font-size: map-get($font-sizes, headText2 );
+            }
+            .image{
+                margin: 24px auto;
+                img{
+                    width: 31vw;
+                    height:auto;
+                    object-fit: contain;
+                    border-radius: 16px;
+                    @include browser('pad') {
+                        width: 90vw;
+                    }
+                }
+            }
+            .title {
+                font-size: map-get($font-sizes, headText3 );
+                height: 30px;
+            }
+            .description {
+                font-size: map-get($font-sizes, body1 );
+                margin: 24px auto;
+                height: 120px;
+                line-height: 24px;
+            }
+            .action {
+                margin: 24px auto;
+                .btn {
+                    @include button();
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
