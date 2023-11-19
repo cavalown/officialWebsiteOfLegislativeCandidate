@@ -21,19 +21,21 @@
     - policy `Policy Page`
     - donate `Donate Page`
   - components `Components for view`
+  - component-store `Component Store`
   - assets
     - style `SCSS`
     - image `Images`
-    - data `Mock Data`
 
 ## 使用技術
 
 - Angular Cli
 - SCSS
 - RWD
-- Mock
+- Reactive Forms
+- NgRx Store
+- RxJS
 
 ## 第三方服務
 
-- aos
-- gsap
+- AOS
+- GSAP
